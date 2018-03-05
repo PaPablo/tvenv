@@ -1,8 +1,8 @@
 #!/bin/bash
-if [ "$#" -lt 1 ]; then
-    echo "Usage: tvenv <[-p | -w]> [ [ -s | --session ] sessionname ] [ [ -e | --venv ] virtualenv ]" 
-   exit
-fi
+#if [ "$#" -lt 4 ]; then
+    #echo "Usage: tvenv <[-p | -w]> [ [ -s | --session ] sessionname ] [ [ -e | --venv ] virtualenv ]" 
+   #exit
+#fi
 
 # Virtualenv name
 VENV=
@@ -12,6 +12,29 @@ DISP=
 
 # Tmux session name
 SESSIONNAME=
+
+# Close current tvenv session
+if [ "$1" = "-q" ]; then
+    shift
+    if [ $# -le 1 ]; then
+        echo "Need a specified session name to close"
+        exit
+    else
+        SESSIONAME=$2
+        if [ "$1" = "-s" ]; then
+            read -p "Desea cerrar la sesión? $SESSIONAME? (y/n) " r
+            if [ "$r" = "y" ];then 
+                tmux kill-session -t "$SESSIONNAME"
+            fi
+            exit
+        else
+            echo "Where is my session!?"
+            exit
+        fi
+        
+    fi
+fi
+            
 
 # Parse command line arguments
 while test $# -gt 0

@@ -26,7 +26,7 @@ The following flags can be used:
 * [-e | --env] venv : sets the virtual environment of name venv into the setup
 * [-t | --tool] editor : opens the editor of your choice. Use the full command surrounded by quotes (this can be avoided setting the tvenv editor environment variable)
 
-And one `tvenv` is running
+And once `tvenv` is running
 * -q -s sessioname: close the session with name sessionname
 
 #### Example

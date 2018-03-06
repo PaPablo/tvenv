@@ -61,6 +61,12 @@ do
                 SESSIONNAME=$2
             fi
         ;;
+        "-t"|"--tool")
+            #tool to use
+            if [ -z "$TOOL" ]; then
+                TOOL=$2
+            fi
+        ;;
     esac
     shift
 done
@@ -82,8 +88,16 @@ PANES="tmux splitw && tmux resizep -t 0.0 -y 40"
 # Command for window disposition
 WINDOW="tmux neww"
 
-# Command for nvim
-NVIM="tmux send-keys -t 0.0 'nvim -c NERDTree' C-m "
+# Command for editor
+if [ -z "$TOOL" ]; then
+    if [ -z "$TVENVEDITOR" ]; then
+        TOOL=$EDITOR
+    else
+        TOOL=$TVENVEDITOR
+    fi
+fi
+
+NVIM="tmux send-keys -t 0.0 '$TOOL' C-m "
 
 # Default session name if none was given
 if [ -z "$SESSIONNAME" ];

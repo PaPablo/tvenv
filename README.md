@@ -17,10 +17,13 @@ The following flags can be used:
 
 * -w : gets two windows 
 * -p : gets one small pane below the main window
-
-* [-s | --session] sessioname : gives the tmux session the name sessioname
+* [-s | --session] sessionname : gives the tmux session the name sessionname
 * [-e | --env] venv : sets the virtual environment of name venv into the setup
+* [-t | --tool] editor : opens the editor of your choice. Use the full command surrounded by quotes
+
+And one `tvenv` is running
+* -q -s sessioname: close the session with name sessionname
 
 #### Example
 
-`tvenv -w -s cool --env develop`
+`tvenv -w -s cool --env develop --tool 'vim -c NERDTree'`

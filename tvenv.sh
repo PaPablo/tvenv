@@ -49,7 +49,7 @@ do
         ;;
         "-w"|"-p")
             # Disposition, windows or panes
-            if [ -z "$DISP"];
+            if [ -z "$DISP" ];
             then
                 DISP=$1
             fi

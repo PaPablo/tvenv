@@ -3,22 +3,20 @@
 
 note: you need these three things to make it work
 
-### Intructions
+### Installation
 
-1. Clone the repo
+1. Clone
 
-1. cd into the folder containing the script
+1. Add the script to `PATH` (any way you like)
 
-1. Add the scrip to `PATH` (any way you like)
-
-1. (optional) Set the TVENVEDITOR environmet variable 
+1. (optional) Set the TVENVEDITOR environment variable 
 ```bash
 export TVENVEDITOR='command to open you editor of choice'
 ```
 
 ### RUN
 
-The following flags can be used:
+The following flags are available:
 
 * -w : gets two windows 
 * -p : gets one small pane below the main window

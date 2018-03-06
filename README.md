@@ -1,5 +1,5 @@
 # Tvenv
-## Setup a small dev environment with [tmux](https://github.com/tmux/tmux/wiki), [Neovim](https://neovim.io/) and [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/)
+## Setup a small dev environment using [tmux](https://github.com/tmux/tmux/wiki)
 
 note: you need these three things to make it work
 
@@ -24,6 +24,7 @@ The following flags can be used:
 * -p : gets one small pane below the main window
 * [-s | --session] sessionname : gives the tmux session the name sessionname
 * [-e | --env] venv : sets the virtual environment of name venv into the setup
+    * this flag needs [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/) to work :)
 * [-t | --tool] editor : opens the editor of your choice. Use the full command surrounded by quotes (this can be avoided setting the tvenv editor environment variable)
 
 And once `tvenv` is running

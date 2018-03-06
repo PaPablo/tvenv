@@ -1,8 +1,6 @@
 # Tvenv
 ## Setup a small dev environment using [tmux](https://github.com/tmux/tmux/wiki)
 
-note: you need these three things to make it work
-
 ### Installation
 
 1. Clone
